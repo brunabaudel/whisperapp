@@ -11,6 +11,8 @@
 		F85677F9297C53EA00D27D96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85677F8297C53EA00D27D96 /* ContentView.swift */; };
 		F85677FB297C53EB00D27D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85677FA297C53EB00D27D96 /* Assets.xcassets */; };
 		F85677FF297C53EB00D27D96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F85677FE297C53EB00D27D96 /* Preview Assets.xcassets */; };
+		F8567807297C580100D27D96 /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = F8567806297C580100D27D96 /* whisper */; };
+		F856780B297C6C2D00D27D96 /* models in Resources */ = {isa = PBXBuildFile; fileRef = F856780A297C6C2C00D27D96 /* models */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		F85677FA297C53EB00D27D96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F85677FC297C53EB00D27D96 /* whisperapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = whisperapp.entitlements; sourceTree = "<group>"; };
 		F85677FE297C53EB00D27D96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F856780A297C6C2C00D27D96 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8567807297C580100D27D96 /* whisper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +56,7 @@
 		F85677F5297C53EA00D27D96 /* whisperapp */ = {
 			isa = PBXGroup;
 			children = (
+				F856780A297C6C2C00D27D96 /* models */,
 				F85677F6297C53EA00D27D96 /* whisperappApp.swift */,
 				F85677F8297C53EA00D27D96 /* ContentView.swift */,
 				F85677FA297C53EB00D27D96 /* Assets.xcassets */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = whisperapp;
+			packageProductDependencies = (
+				F8567806297C580100D27D96 /* whisper */,
+			);
 			productName = whisperapp;
 			productReference = F85677F3297C53EA00D27D96 /* whisperapp.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = F85677EA297C53EA00D27D96;
+			packageReferences = (
+				F8567805297C580100D27D96 /* XCRemoteSwiftPackageReference "whisper" */,
+			);
 			productRefGroup = F85677F4297C53EA00D27D96 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +140,7 @@
 			files = (
 				F85677FF297C53EB00D27D96 /* Preview Assets.xcassets in Resources */,
 				F85677FB297C53EB00D27D96 /* Assets.xcassets in Resources */,
+				F856780B297C6C2D00D27D96 /* models in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +291,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -317,7 +329,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -354,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F8567805297C580100D27D96 /* XCRemoteSwiftPackageReference "whisper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ggerganov/whisper.spm";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F8567806297C580100D27D96 /* whisper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F8567805297C580100D27D96 /* XCRemoteSwiftPackageReference "whisper" */;
+			productName = whisper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F85677EB297C53EA00D27D96 /* Project object */;
 }
